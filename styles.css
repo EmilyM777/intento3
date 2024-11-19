@@ -1,0 +1,148 @@
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #3c77bc; /* Fondo púrpura oscuro */
+            font-family: titulos2;
+            color: #5d6d7e; /* Texto en púrpura claro */
+            padding: 20px;
+        }
+
+        @font-face {
+            font-family: titulos1;
+            src: url(Tiny5-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: titulos2;
+            src: url(Pixely.ttf);
+        }
+
+        /* Contenedor principal de las cartas */
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Una sola columna por defecto */
+            gap: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* En pantallas más grandes, muestra dos filas de tres cartas */
+        @media (min-width: 768px) {
+            .card-container {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1000px;
+            }
+        }
+
+        /* Estilos de la tarjeta */
+        .card {
+            background-color: #85c1e9; /* Fondo púrpura oscuro */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #6592c4; /* Texto púrpura claro */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Efecto de elevación al pasar el cursor */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilo de la imagen pixel art */
+        .card img {
+            width: 100px;
+            height: 100px;
+            image-rendering: pixelated; /* Efecto pixelado */
+            border: 3px solid #3c77bc; /* Borde púrpura */
+            border-radius: 50%;
+            margin-bottom: 15px;
+            background-color: #ffefd4; /* Fondo lila claro */
+        }
+
+        /* Nombre del personaje */
+        .character-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ce5454; /* Color púrpura pastel */
+            margin-bottom: 10px;
+            font-family: titulos1;
+            font-size: 30px;
+        }
+
+        /* Descripción y atributos */
+        .description {
+            font-size: 14px;
+            color: #ddffec; /* Púrpura suave */
+            margin-bottom: 15px;
+            text-align: justify;
+            text-align: center;
+        }
+
+        /* Barra de atributos */
+        .attribute {
+            margin: 5px 0;
+        }
+
+        .attribute-label {
+            font-size: 14px;
+            color: #ddffec; /* Texto claro */
+        }
+
+        .attribute-bar {
+            background-color: #5696ca; /* Fondo púrpura oscuro */
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .attribute-bar-1 {
+            background-color: #1b7519; /* Fondo púrpura oscuro */
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .attribute-fill {
+            height: 100%;
+            background-color: #ce5454; /* Púrpura pastel para el relleno */
+        }
+
+        /* Estilo especial para la última tarjeta */
+        .card-special {
+            background-color: #85c1e9; /* Fono más vibrante */
+            border: 3px solid #ffd700; /* Borde dorado */
+            color: #ffd700; /* Texto dorado */
+        }
+
+        .card-special .character-name {
+            color: #ffd700; /* Nombre en dorado */
+        }
+
+        .card-special .attribute-fill {
+            background-color: #FFD700; /* Relleno de atributo en dorado */
+        }
+
+        h1 {
+            background-color: red;
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+            width: 400px;
+            color: white;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+
+        }
